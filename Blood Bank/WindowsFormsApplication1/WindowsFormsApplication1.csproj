@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{80C8557E-7D02-4B1A-83F6-1512BBD7E88F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsFormsApplication1</RootNamespace>
+    <AssemblyName>WindowsFormsApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\Blood transfusion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Blood transfusion.Designer.cs">
+      <DependentUpon>Blood transfusion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Blood.cs" />
+    <Compile Include="Classes\Connection.cs" />
+    <Compile Include="Forms\Cover.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cover.Designer.cs">
+      <DependentUpon>Cover.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Donor.cs" />
+    <Compile Include="Forms\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form10.Designer.cs">
+      <DependentUpon>Form10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form11.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form11.Designer.cs">
+      <DependentUpon>Form11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form5.Designer.cs">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form6.Designer.cs">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form7.Designer.cs">
+      <DependentUpon>Form7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form8.Designer.cs">
+      <DependentUpon>Form8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form9.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form9.Designer.cs">
+      <DependentUpon>Form9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\FreeMedicine.cs" />
+    <Compile Include="Forms\InsertResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InsertResult.Designer.cs">
+      <DependentUpon>InsertResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Login.cs" />
+    <Compile Include="Forms\NewTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NewTest.Designer.cs">
+      <DependentUpon>NewTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Patient.cs" />
+    <Compile Include="Classes\Person.cs" />
+    <Compile Include="Classes\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Forms\RegMedicine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RegMedicine.Designer.cs">
+      <DependentUpon>RegMedicine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Reports.cs" />
+    <EmbeddedResource Include="Forms\Blood transfusion.resx">
+      <DependentUpon>Blood transfusion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cover.resx">
+      <DependentUpon>Cover.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form10.resx">
+      <DependentUpon>Form10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form11.resx">
+      <DependentUpon>Form11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form5.resx">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form6.resx">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form7.resx">
+      <DependentUpon>Form7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form8.resx">
+      <DependentUpon>Form8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form9.resx">
+      <DependentUpon>Form9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InsertResult.resx">
+      <DependentUpon>InsertResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NewTest.resx">
+      <DependentUpon>NewTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RegMedicine.resx">
+      <DependentUpon>RegMedicine.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Classes\App1.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Class Diagram\ClassDiagram1.cd" />
+    <None Include="Properties\DataSources\Donor.datasource" />
+    <None Include="Properties\DataSources\Form1.datasource" />
+    <None Include="Properties\DataSources\Form2.datasource" />
+    <None Include="Properties\DataSources\Form3.datasource" />
+    <None Include="Properties\DataSources\Form5.datasource" />
+    <None Include="Properties\DataSources\Form6.datasource" />
+    <None Include="Properties\DataSources\Patient.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApplication1.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApplication1.Properties.Settings.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Flag_of_the_Red_Cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\011.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Give Blood Theme.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bloodbank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save Life Theme.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Main.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Main1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Admin1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Admin11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blood-donation1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\patient.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reports.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pcontact.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reports1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\012.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new 01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Contact.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Contact1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Contact2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Contact3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pills.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blood Transfusion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bioresonance-EEG-heartbeat.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\beating.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\After Effects Heartbeat.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CRlTlB2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contact animated.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transfusion.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\animated-pills.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medicine.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\keyboardpass.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blood.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blood-o.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
