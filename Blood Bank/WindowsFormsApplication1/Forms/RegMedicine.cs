@@ -49,10 +49,30 @@ namespace WindowsFormsApplication1
         {
             try
             {
-                DateTime d = dateTimePicker1.Value;
-                M = new FreeMedicine(comboBox1.Text, textBox2.Text, textBox1.Text, textBox7.Text,textBox5.Text,textBox6.Text,textBox4.Text, textBox3.Text, d);
-                M.insertData();
-                MessageBox.Show("Data inserted Successfully");
+                if (comboBox1.Text != "")
+                {
+                    if (textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "" && textBox5.Text != "" && textBox6.Text != "" && textBox7.Text != "" && textBox8.Text != "")
+                    {
+                        DateTime d = dateTimePicker1.Value;
+                        M = new FreeMedicine(comboBox1.Text, textBox2.Text, textBox1.Text, textBox7.Text, textBox5.Text, textBox6.Text, textBox4.Text, textBox3.Text, d);
+                        M.insertData();
+                        MessageBox.Show("Data inserted Successfully");
+
+                        this.Hide();
+                        Cover c = new Cover();
+                        c.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("All fields are required");
+                    }
+                    
+                }
+                else
+                {
+                    MessageBox.Show("Patient ID can not be empty");
+                }
+                
             }
             catch (Exception excep)
             {

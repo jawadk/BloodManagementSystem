@@ -20,6 +20,9 @@ namespace WindowsFormsApplication1
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            textBox1.Hide();
+            label12.Hide();
+
             try
             {
                 con = new Connection();
@@ -65,9 +68,17 @@ namespace WindowsFormsApplication1
         {
             try
             {
-                Donor donor = new Donor(textBox1.Text, comboBox1.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text, textBox8.Text, textBox9.Text, comboBox2.Text, textBox11.Text, textBox12.Text, textBox13.Text);
-                donor.insertData();
-                MessageBox.Show("Successfully Saved");
+                if (textBox3.Text != "" && comboBox1.Text != "")
+                {
+                    Donor donor = new Donor(textBox1.Text, comboBox1.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text, textBox8.Text, textBox9.Text, comboBox2.Text, textBox11.Text, textBox12.Text, textBox13.Text);
+                    donor.insertData();
+                    MessageBox.Show("Successfully Saved");                    
+                }
+                else
+                {
+                    MessageBox.Show("Doner Name \n Blood Group can not be empty.!");
+                }
+                
             }
             catch (Exception excep)
             {

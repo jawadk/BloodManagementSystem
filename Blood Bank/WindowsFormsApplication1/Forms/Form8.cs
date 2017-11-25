@@ -27,10 +27,17 @@ namespace WindowsFormsApplication1
             //Select Quert to search a specific donor
             try
             {
-                DataTable dtable = new DataTable();
-                d1 = new Donor();
-                dtable = d1.getTable("SELECT * From `donor` WHERE `Donor_Number` = '" + comboBox1.Text + "'");
-                dataGridView1.DataSource = dtable;
+                if (comboBox1.Text != "")
+                {
+                    DataTable dtable = new DataTable();
+                    d1 = new Donor();
+                    dtable = d1.getTable("SELECT * From `donor` WHERE `Donor_Number` = " + comboBox1.Text);
+                    dataGridView1.DataSource = dtable;                    
+                }
+                else
+                {
+                    MessageBox.Show("Please select Donor ID");
+                }                
             }
             catch (Exception excep)
             {
@@ -43,11 +50,19 @@ namespace WindowsFormsApplication1
             //Delete Quert to delete a specific donor
             try
             {
-                DataTable dtable = new DataTable();
-                d1 = new Donor();
-                dtable = d1.getTable("DELETE * From `donor` where Donor_Number = '" + comboBox1.Text + "'");
-                dataGridView1.DataSource = dtable;
-                MessageBox.Show("Data Deleted Successfully");
+                if (comboBox1.Text != "")
+                {
+                    DataTable dtable = new DataTable();
+                    d1 = new Donor();
+                    dtable = d1.getTable("DELETE * From `donor` where Donor_Number = " + comboBox1.Text);
+                    dataGridView1.DataSource = dtable;
+                    MessageBox.Show("Data Deleted Successfully");
+                }
+                else
+                {
+                    MessageBox.Show("Please select donor id");
+                }
+                
             }
             catch (Exception excep)
             {
@@ -80,9 +95,18 @@ namespace WindowsFormsApplication1
 
         private void button5_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Form10 f10 = new Form10();
-            f10.Show();
+            if (comboBox1.Text != "")
+            {
+                this.Hide();
+                Form f10 = new Form10(Convert.ToInt32(comboBox1.Text));
+                f10.Show();
+            }
+            else
+            {
+                MessageBox.Show("Please select donor ID");
+            }
+            
+            
         }
 
         private void Form8_Load(object sender, EventArgs e)

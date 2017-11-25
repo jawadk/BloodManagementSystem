@@ -49,7 +49,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(247, 177);
+            this.label1.Location = new System.Drawing.Point(799, 313);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 19);
             this.label1.TabIndex = 5;
@@ -101,7 +101,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(481, 176);
+            this.label5.Location = new System.Drawing.Point(655, 313);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(138, 19);
             this.label5.TabIndex = 13;
@@ -126,7 +126,7 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button6.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button6.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button6.Location = new System.Drawing.Point(502, 198);
+            this.button6.Location = new System.Drawing.Point(676, 335);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(91, 83);
             this.button6.TabIndex = 12;
@@ -186,7 +186,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(231, 199);
+            this.button1.Location = new System.Drawing.Point(783, 335);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(91, 83);
             this.button1.TabIndex = 1;
@@ -229,6 +229,7 @@
             this.Name = "Cover";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cover";
+            this.Load += new System.EventHandler(this.Cover_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

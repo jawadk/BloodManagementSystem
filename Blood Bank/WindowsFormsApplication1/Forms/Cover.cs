@@ -115,5 +115,14 @@ namespace WindowsFormsApplication1
         {
             button6.Size = new Size(91,83);
         }
+
+        private void Cover_Load(object sender, EventArgs e)
+        {
+            label1.Hide();
+            button1.Hide();
+            button6.Hide();
+            label5.Hide();
+
+        }
     }
 }

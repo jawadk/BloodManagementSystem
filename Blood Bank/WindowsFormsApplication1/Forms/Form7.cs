@@ -26,6 +26,9 @@ namespace WindowsFormsApplication1
 
         private void Form7_Load(object sender, EventArgs e)
         {
+            button6.Hide();
+            button8.Hide();
+            
             try
             {
                 con = new Connection();
@@ -59,10 +62,18 @@ namespace WindowsFormsApplication1
             //Select Quert to search a specific patient
             try
             {
-                DataTable ptable = new DataTable();
-                p1 = new Patient();
-                ptable = p1.getTable("SELECT * From `patient` WHERE `Patient_Number` = '" + comboBox1.Text + "'");
-                dataGridView1.DataSource = ptable;
+                if (comboBox1.Text != "")
+                {
+                    DataTable ptable = new DataTable();
+                    p1 = new Patient();
+                    ptable = p1.getTable("SELECT * From `patient` WHERE `Patient_Number` = " + comboBox1.Text);
+                    dataGridView1.DataSource = ptable;
+                }
+                else
+                {
+                    MessageBox.Show("Please selecy any Patient ID");
+                }
+                
             }
             catch (Exception excep)
             {
@@ -80,11 +91,19 @@ namespace WindowsFormsApplication1
             //Delete Query to delete a specific patient
             try
             {
-                DataTable ptable = new DataTable();
-                p1 = new Patient();
-                ptable = p1.getTable("DELETE * From `patient` where Patient_Number = '" + comboBox1.Text + "'");
-                dataGridView1.DataSource = ptable;
-                MessageBox.Show("Data Deleted Successfully");
+                if (comboBox1.Text != "")
+                {
+                    DataTable ptable = new DataTable();
+                    p1 = new Patient();
+                    ptable = p1.getTable("DELETE * From `patient` where Patient_Number = " + comboBox1.Text);
+                    dataGridView1.DataSource = ptable;
+                    MessageBox.Show("Data Deleted Successfully");                    
+                }
+                else
+                {
+                    MessageBox.Show("Please selecy any Patient ID");
+                }
+                
             }
             catch (Exception excep)
             {
@@ -117,9 +136,16 @@ namespace WindowsFormsApplication1
 
         private void button5_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Form9 f9 = new Form9();
-            f9.Show();
+            if (comboBox1.Text != "")
+                {
+                    this.Hide();
+                    Form9 f9 = new Form9();
+                    f9.Show();                    
+                }
+                else
+                {
+                    MessageBox.Show("Please selecy any Patient ID");                    
+                }
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -127,10 +153,18 @@ namespace WindowsFormsApplication1
             //Join Query for Reports
             try
             {
-                DataTable ptable = new DataTable();
-                p1 = new Patient();
-                ptable = p1.joinTable("SELECT report.Patient_Number, report.Patient_Name, test.Report_Number, test.Report FROM report INNER JOIN test ON report.Patient_Number = test.Patient_Number where report.Patient_Number = '" + comboBox1.Text + "'");
-                dataGridView1.DataSource = ptable;
+                if (comboBox1.Text != "")
+                {
+                    DataTable ptable = new DataTable();
+                    p1 = new Patient();
+                    ptable = p1.joinTable("SELECT report.Patient_Number, report.Patient_Name, test.Report_Number, test.Report FROM report INNER JOIN test ON report.Patient_Number = test.Patient_Number where report.Patient_Number = " + comboBox1.Text);
+                    dataGridView1.DataSource = ptable;                    
+                }
+                else
+                {
+                    MessageBox.Show("Please selecy any Patient ID");
+                }
+                
             }
             catch (Exception excep)
             {
@@ -192,10 +226,18 @@ namespace WindowsFormsApplication1
         {
             try
             {
-                DataTable ptable = new DataTable();
-                m = new FreeMedicine();
-                ptable = m.getTable("SELECT * From `Medicine` WHERE `Patient_Number` = '" + comboBox1.Text + "'");
-                dataGridView1.DataSource = ptable;
+                if (comboBox1.Text != "")
+                {
+                    DataTable ptable = new DataTable();
+                    m = new FreeMedicine();
+                    ptable = m.getTable("SELECT * From `Medicine` WHERE `Patient_Number` = " + comboBox1.Text);
+                    dataGridView1.DataSource = ptable;                    
+                }
+                else
+                {
+                    MessageBox.Show("Please selecy any Patient ID");
+                }
+                
             }
             catch (Exception excep)
             {
@@ -212,10 +254,18 @@ namespace WindowsFormsApplication1
         {
           try
             {
-                DataTable ptable = new DataTable();
-                B = new Blood();
-                ptable = B.getTable("SELECT * From `Blood` WHERE `Patient_Number` = '" + comboBox1.Text + "'");
-                dataGridView1.DataSource = ptable;
+              if (comboBox1.Text != "")
+                {
+                    DataTable ptable = new DataTable();
+                    B = new Blood();
+                    ptable = B.getTable("SELECT * From `Blood` WHERE Patient_Number = " + comboBox1.Text);
+                    dataGridView1.DataSource = ptable;                    
+                }
+                else
+                {
+                    MessageBox.Show("Please selecy any Patient ID");
+                }
+                
             }
             catch (Exception excep)
             {

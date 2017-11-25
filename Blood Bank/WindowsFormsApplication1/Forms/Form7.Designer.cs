@@ -51,7 +51,9 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Gray;
             this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.button8);
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.button6);
             this.panel1.Location = new System.Drawing.Point(11, 14);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(973, 66);
@@ -89,7 +91,7 @@
             this.button1.Font = new System.Drawing.Font("Georgia", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(302, 102);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(72, 25);
+            this.button1.Size = new System.Drawing.Size(106, 25);
             this.button1.TabIndex = 4;
             this.button1.Text = "Search";
             this.button1.UseVisualStyleBackColor = true;
@@ -121,9 +123,9 @@
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Georgia", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(380, 102);
+            this.button2.Location = new System.Drawing.Point(414, 102);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(72, 25);
+            this.button2.Size = new System.Drawing.Size(105, 25);
             this.button2.TabIndex = 8;
             this.button2.Text = "Delete";
             this.button2.UseVisualStyleBackColor = true;
@@ -135,7 +137,7 @@
             // 
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Georgia", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(817, 102);
+            this.button3.Location = new System.Drawing.Point(815, 102);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(167, 25);
             this.button3.TabIndex = 9;
@@ -162,9 +164,9 @@
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button5.Font = new System.Drawing.Font("Georgia", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(458, 102);
+            this.button5.Location = new System.Drawing.Point(531, 102);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(72, 25);
+            this.button5.Size = new System.Drawing.Size(101, 25);
             this.button5.TabIndex = 11;
             this.button5.Text = "Update";
             this.button5.UseVisualStyleBackColor = true;
@@ -176,7 +178,7 @@
             // 
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button6.Font = new System.Drawing.Font("Georgia", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(536, 102);
+            this.button6.Location = new System.Drawing.Point(543, 38);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(72, 25);
             this.button6.TabIndex = 12;
@@ -190,9 +192,9 @@
             // 
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button7.Font = new System.Drawing.Font("Georgia", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(614, 102);
+            this.button7.Location = new System.Drawing.Point(644, 102);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(82, 25);
+            this.button7.Size = new System.Drawing.Size(97, 25);
             this.button7.TabIndex = 13;
             this.button7.Text = "Medicine records";
             this.button7.UseVisualStyleBackColor = true;
@@ -202,7 +204,7 @@
             // 
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button8.Font = new System.Drawing.Font("Georgia", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(702, 102);
+            this.button8.Location = new System.Drawing.Point(621, 41);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(109, 25);
             this.button8.TabIndex = 14;
@@ -226,9 +228,7 @@
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(994, 455);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);

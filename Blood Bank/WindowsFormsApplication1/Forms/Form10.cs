@@ -14,46 +14,69 @@ namespace WindowsFormsApplication1
     {
         Connection con;
         Donor d1;
+
+        public int ID { get; set; }
         public Form10()
         {
             InitializeComponent();
+        }
+
+         public Form10(int id)
+        {
+            InitializeComponent();
+            ID = id;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
-                DataTable tbl = new DataTable();
-                d1 = new Donor();
-                tbl = d1.selectData(comboBox1.Text);
-                comboBox1.Text = tbl.Rows[0]["Donor_Number"].ToString();
-                comboBox1.Enabled = false;
-                textBox2.Text = tbl.Rows[0]["Blood_Group"].ToString();
-                textBox3.Text = tbl.Rows[0]["Donor_Name"].ToString();
-                textBox4.Text = tbl.Rows[0]["Donor_DOB"].ToString();
-                textBox5.Text = tbl.Rows[0]["Donor_Add1"].ToString();
-                textBox6.Text = tbl.Rows[0]["Donor_Add2"].ToString();
-                textBox7.Text = tbl.Rows[0]["Donor_Ph-No"].ToString();
-                textBox8.Text = tbl.Rows[0]["Donor_Cell-No"].ToString();
-                textBox9.Text = tbl.Rows[0]["date"].ToString();
-                textBox10.Text = tbl.Rows[0]["Branch_Location"].ToString();
-                textBox11.Text = tbl.Rows[0]["city"].ToString();
-                textBox12.Text = tbl.Rows[0]["Amount_of_Blood"].ToString();
-                textBox13.Text = tbl.Rows[0]["Donor_Email"].ToString();
+                if (comboBox1.Text != "")
+                {
+                    DataTable tbl = new DataTable();
+                    d1 = new Donor();
+                    tbl = d1.selectData(comboBox1.Text);
+                    //comboBox1.Text = tbl.Rows[0]["Donor_Number"].ToString();
+                    comboBox1.Enabled = false;
+                    textBox2.Text = tbl.Rows[0]["Blood_Group"].ToString();
+                    textBox3.Text = tbl.Rows[0]["Donor_Name"].ToString();
+                    textBox4.Text = tbl.Rows[0]["Donor_DOB"].ToString();
+                    textBox5.Text = tbl.Rows[0]["Donor_Add1"].ToString();
+                    textBox6.Text = tbl.Rows[0]["Donor_Add2"].ToString();
+                    textBox7.Text = tbl.Rows[0]["Donor_Ph-No"].ToString();
+                    textBox8.Text = tbl.Rows[0]["Donor_Cell-No"].ToString();
+                    textBox9.Text = tbl.Rows[0]["date"].ToString();
+                    textBox10.Text = tbl.Rows[0]["Branch_Location"].ToString();
+                    textBox11.Text = tbl.Rows[0]["city"].ToString();
+                    textBox12.Text = tbl.Rows[0]["Amount_of_Blood"].ToString();
+                    textBox13.Text = tbl.Rows[0]["Donor_Email"].ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Please select Donor ID");
+                }
             }
             catch (Exception excep)
             {
                 MessageBox.Show(excep.Message + " Data Couldn't be Retrieved");
             }
-        }
+        } 
 
         private void button3_Click(object sender, EventArgs e)
         {
             try
             {
-                d1 = new Donor(comboBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text, textBox8.Text, textBox9.Text, textBox10.Text, textBox11.Text, textBox12.Text, textBox13.Text);
-                d1.updateData();
-                MessageBox.Show("Data Updated Successfully");
+                if (textBox3.Text != "" && comboBox1.Text != "")
+                {
+                    d1 = new Donor(comboBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text, textBox8.Text, textBox9.Text, textBox10.Text, textBox11.Text, textBox12.Text, textBox13.Text);
+                    d1.updateData(Convert.ToInt32( comboBox1.Text));
+                    MessageBox.Show("Data Updated Successfully");
+                }
+                else
+                {
+                    MessageBox.Show("Donor ID and Name can not be empty");
+                }
+                
             }
             catch (Exception excep)
             {

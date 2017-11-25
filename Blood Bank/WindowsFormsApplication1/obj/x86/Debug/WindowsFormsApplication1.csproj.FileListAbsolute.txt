@@ -560,3 +560,4 @@ D:\VS_Workspace\Blood Bank Management System (Final)\Blood Bank\WindowsFormsAppl
 D:\VS_Workspace\Blood Bank Management System (Final)\Blood Bank\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
 D:\VS_Workspace\Blood Bank Management System (Final)\Blood Bank\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
 D:\VS_Workspace\Blood Bank Management System (Final)\Blood Bank\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
+D:\VS_Workspace\Blood Bank Management System (Final)\Blood Bank\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache

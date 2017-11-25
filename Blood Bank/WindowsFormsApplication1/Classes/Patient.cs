@@ -17,9 +17,9 @@ namespace WindowsFormsApplication1
         }
 
         // Customized Constructor; taking parameters
-        public Patient(string _pnumber, string _bgroup, string _pname, string _pdob, string _padd1, string _padd2, string _pphno, string _pcellno, string _date, string _blocation, string _city, string _amountofblood, string _pemailid)
+        public Patient(string _bgroup, string _pname, string _pdob, string _padd1, string _padd2, string _pphno, string _pcellno, string _date, string _blocation, string _city, string _amountofblood, string _pemailid)
         {
-            IdNumber = _pnumber;
+            //IdNumber = _pnumber;
             BloodGroup = _bgroup;
             Name = _pname;
             DOB = _pdob;
@@ -34,17 +34,17 @@ namespace WindowsFormsApplication1
             EmailId = _pemailid;
         }
 
-        public Patient(string _pnumber)
-        {
-            IdNumber = _pnumber;
-        }
+        //public Patient(string _pnumber)
+        //{
+        //    IdNumber = _pnumber;
+        //}
 
         // Insert Query for Patient Registration Form
         public void insertData()
         {
             con = new Connection();
             string insertQuery;
-            insertQuery = String.Format("INSERT INTO `patient` (`Patient_Number`, `Blood_Group`, `Patient_Name`, `Patient_DOB`, `Patient_Add1`, `Patient_Add2`, `Patient_Ph-No`, `Patient_Cell-No`, `Date`, `Branch_Location`, `City`, `Amount_of_Blood`, `Patient_Email`) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}')", IdNumber, BloodGroup, Name, DOB, Add1, Add2, PhoneNo, CellNo, Date, BranchLocation, City, AmountofBlood, EmailId).ToString();            
+            insertQuery = String.Format("INSERT INTO `patient` (`Blood_Group`, `Patient_Name`, `Patient_DOB`, `Patient_Add1`, `Patient_Add2`, `Patient_Ph-No`, `Patient_Cell-No`, `Date`, `Branch_Location`, `City`, `Amount_of_Blood`, `Patient_Email`) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}')", BloodGroup, Name, DOB, Add1, Add2, PhoneNo, CellNo, Date, BranchLocation, City, AmountofBlood, EmailId).ToString();            
             OleDbCommand cmd = new OleDbCommand(insertQuery, con.connect());
             cmd.ExecuteNonQuery();
         }
@@ -71,7 +71,7 @@ namespace WindowsFormsApplication1
         {
             DataTable tbl = new DataTable();
             con = new Connection();            
-            string query = "SELECT * FROM patient WHERE Patient_Number = '" + IdNumber + "'";
+            string query = "SELECT * FROM patient WHERE Patient_Number = " + IdNumber;
             OleDbCommand cmd = new OleDbCommand(query, con.connect());
             cmd.Parameters.AddWithValue("@p1", IdNumber);
             OleDbDataAdapter adp = new OleDbDataAdapter(cmd);
@@ -80,10 +80,10 @@ namespace WindowsFormsApplication1
         }
 
         //Update Query for Patients
-        public void updateData()
+        public void updateData(int IdNumber)
         {
             con = new Connection();            
-            string query = "UPDATE patient SET Blood_Group = '"+BloodGroup+"', Patient_Name = '"+Name+"', Patient_DOB = '"+DOB+"', Patient_Add1 = '"+Add1+"', Patient_Add2 = '"+Add2+"', `Patient_Ph-No` = '"+PhoneNo+"', `Patient_Cell-No` = '"+CellNo+"', `Date` = '"+Date+"', Branch_Location = '"+BranchLocation+"', city = '"+City+"', Amount_of_Blood = '"+AmountofBlood+"', Patient_Email = '"+EmailId+"' WHERE Patient_Number = '"+IdNumber+"'";
+            string query = "UPDATE patient SET Blood_Group = '"+BloodGroup+"', Patient_Name = '"+Name+"', Patient_DOB = '"+DOB+"', Patient_Add1 = '"+Add1+"', Patient_Add2 = '"+Add2+"', `Patient_Ph-No` = '"+PhoneNo+"', `Patient_Cell-No` = '"+CellNo+"', `Date` = '"+Date+"', Branch_Location = '"+BranchLocation+"', city = '"+City+"', Amount_of_Blood = '"+AmountofBlood+"', Patient_Email = '"+EmailId+"' WHERE Patient_Number = "+IdNumber;
             OleDbCommand cmd = new OleDbCommand(query, con.connect());
             cmd.ExecuteNonQuery();
         }

@@ -27,11 +27,20 @@ namespace WindowsFormsApplication1
 
         private void button3_Click(object sender, EventArgs e)
         {
+            
             try
             {
-                p1 = new Patient(comboBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text, textBox8.Text, textBox9.Text, textBox10.Text, textBox11.Text, textBox12.Text, textBox13.Text);
-                p1.updateData();
-                MessageBox.Show("Data Updated Successfully");
+                if (comboBox1.Text != "")
+                {
+                    p1 = new Patient(textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text, textBox8.Text, textBox9.Text, textBox10.Text, textBox11.Text, textBox12.Text, textBox13.Text);
+                    p1.updateData(Convert.ToInt32(comboBox1.Text));
+                    MessageBox.Show("Data Updated Successfully");
+                }
+                else
+                {
+                    MessageBox.Show("Please selecy any Patient ID");
+                }
+                
             }
             catch (Exception excep)
             {
@@ -43,23 +52,31 @@ namespace WindowsFormsApplication1
         {
             try
             {
-                DataTable tbl = new DataTable();
-                p1 = new Patient();
-                tbl = p1.selectData(comboBox1.Text);
-                comboBox1.Text = tbl.Rows[0]["Patient_Number"].ToString();
-                comboBox1.Enabled = false;
-                textBox2.Text = tbl.Rows[0]["Blood_Group"].ToString();
-                textBox3.Text = tbl.Rows[0]["Patient_Name"].ToString();
-                textBox4.Text = tbl.Rows[0]["Patient_DOB"].ToString();
-                textBox5.Text = tbl.Rows[0]["Patient_Add1"].ToString();
-                textBox6.Text = tbl.Rows[0]["Patient_Add2"].ToString();
-                textBox7.Text = tbl.Rows[0]["Patient_Ph-No"].ToString();
-                textBox8.Text = tbl.Rows[0]["Patient_Cell-No"].ToString();
-                textBox9.Text = tbl.Rows[0]["Date"].ToString();
-                textBox10.Text = tbl.Rows[0]["Branch_Location"].ToString();
-                textBox11.Text = tbl.Rows[0]["city"].ToString();
-                textBox12.Text = tbl.Rows[0]["Amount_of_Blood"].ToString();
-                textBox13.Text = tbl.Rows[0]["Patient_Email"].ToString();
+                if (comboBox1.Text != "")
+                {
+                    DataTable tbl = new DataTable();
+                    p1 = new Patient();
+                    tbl = p1.selectData(comboBox1.Text);
+                    comboBox1.Text = tbl.Rows[0]["Patient_Number"].ToString();
+                    comboBox1.Enabled = false;
+                    textBox2.Text = tbl.Rows[0]["Blood_Group"].ToString();
+                    textBox3.Text = tbl.Rows[0]["Patient_Name"].ToString();
+                    textBox4.Text = tbl.Rows[0]["Patient_DOB"].ToString();
+                    textBox5.Text = tbl.Rows[0]["Patient_Add1"].ToString();
+                    textBox6.Text = tbl.Rows[0]["Patient_Add2"].ToString();
+                    textBox7.Text = tbl.Rows[0]["Patient_Ph-No"].ToString();
+                    textBox8.Text = tbl.Rows[0]["Patient_Cell-No"].ToString();
+                    textBox9.Text = tbl.Rows[0]["Date"].ToString();
+                    textBox10.Text = tbl.Rows[0]["Branch_Location"].ToString();
+                    textBox11.Text = tbl.Rows[0]["city"].ToString();
+                    textBox12.Text = tbl.Rows[0]["Amount_of_Blood"].ToString();
+                    textBox13.Text = tbl.Rows[0]["Patient_Email"].ToString();                    
+                }
+                else
+                {
+                    MessageBox.Show("Please selecy any Patient ID");
+                }
+                
             }
             catch (Exception excep)
             {

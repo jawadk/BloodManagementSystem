@@ -18,6 +18,11 @@ namespace WindowsFormsApplication1
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (!radioButton1.Checked && !radioButton2.Checked)
+            {
+                MessageBox.Show("Please Select Any Option");
+                
+            }
             if (radioButton1.Checked)
             {
                 this.Hide();
@@ -41,6 +46,12 @@ namespace WindowsFormsApplication1
 
         private void button3_Click(object sender, EventArgs e)
         {
+
+            if (!radioButton1.Checked && !radioButton2.Checked)
+            {
+                MessageBox.Show("Please Select Any Option");
+
+            } 
             if (radioButton1.Checked)
             {
                 this.Hide();

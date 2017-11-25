@@ -20,6 +20,8 @@ namespace WindowsFormsApplication1
 
         private void Form5_Load(object sender, EventArgs e)
         {
+            textBox1.Hide();
+            label2.Hide();
             try
             {
                 connect = new Connection();
@@ -55,9 +57,17 @@ namespace WindowsFormsApplication1
         {
             try
             {
-                Patient patient = new Patient(textBox1.Text, comboBox1.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text, textBox8.Text, textBox9.Text, comboBox2.Text, textBox11.Text, textBox12.Text, textBox13.Text);
-                patient.insertData();
-                MessageBox.Show("Successfully Saved");
+                if (textBox3.Text != "" && comboBox1.Text != "" && textBox4.Value.Date < DateTime.Today.Date)
+                {
+                    Patient patient = new Patient(comboBox1.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text, textBox8.Text, textBox9.Text, comboBox2.Text, textBox11.Text, textBox12.Text, textBox13.Text);
+                    patient.insertData();
+                    MessageBox.Show("Successfully Saved");                    
+                }
+                else
+                {
+                    MessageBox.Show("Please enter required fields: Name, Blood group and DOB should be less then today's date");
+                }
+                
             }
             catch (Exception excep)
             {
