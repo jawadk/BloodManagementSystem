@@ -116,13 +116,18 @@ namespace WindowsFormsApplication1
             button6.Size = new Size(91,83);
         }
 
-        private void Cover_Load(object sender, EventArgs e)
+        private void button7_Click(object sender, EventArgs e)
         {
-            label1.Hide();
-            button1.Hide();
-            button6.Hide();
-            label5.Hide();
+            this.Hide();
+            Form3 form3= new Form3();
+            form3.Show();
+        }
 
+        private void button8_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Blood_transfusion bt = new Blood_transfusion();
+            bt.Show();
         }
     }
 }

@@ -86,5 +86,10 @@ namespace WindowsFormsApplication1
             Cover c = new Cover();
             c.Show();
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
