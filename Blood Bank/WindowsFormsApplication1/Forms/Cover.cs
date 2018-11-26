@@ -19,7 +19,7 @@ namespace WindowsFormsApplication1
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form2 f2 = new Form2();
+            UserType f2 = new UserType();
             f2.Show();
         }
 
@@ -31,7 +31,7 @@ namespace WindowsFormsApplication1
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form3 f3 = new Form3();
+            LoginForm f3 = new LoginForm();
             f3.Show();
         }
 
@@ -63,7 +63,7 @@ namespace WindowsFormsApplication1
         private void button4_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form11 f11 = new Form11();
+            WelcomeForm f11 = new WelcomeForm();
             f11.Show();
         }
 
@@ -119,7 +119,7 @@ namespace WindowsFormsApplication1
         private void button7_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form3 form3= new Form3();
+            LoginForm form3= new LoginForm();
             form3.Show();
         }
 

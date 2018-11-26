@@ -561,3 +561,24 @@ D:\VS_Workspace\Blood Bank Management System (Final)\Blood Bank\WindowsFormsAppl
 D:\VS_Workspace\Blood Bank Management System (Final)\Blood Bank\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
 D:\VS_Workspace\Blood Bank Management System (Final)\Blood Bank\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
 D:\VS_Workspace\Blood Bank Management System (Final)\Blood Bank\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+E:\VS_Workspace\BloodManagementSystem\Blood Bank\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+E:\VS_Workspace\BloodManagementSystem\Blood Bank\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+E:\VS_Workspace\BloodManagementSystem\Blood Bank\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Blood_transfusion.resources
+E:\VS_Workspace\BloodManagementSystem\Blood Bank\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Cover.resources
+E:\VS_Workspace\BloodManagementSystem\Blood Bank\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.NewDonorForm.resources
+E:\VS_Workspace\BloodManagementSystem\Blood Bank\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.DonorDetailForm.resources
+E:\VS_Workspace\BloodManagementSystem\Blood Bank\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.WelcomeForm.resources
+E:\VS_Workspace\BloodManagementSystem\Blood Bank\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.UserType.resources
+E:\VS_Workspace\BloodManagementSystem\Blood Bank\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.LoginForm.resources
+E:\VS_Workspace\BloodManagementSystem\Blood Bank\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.AddNewPatientForm.resources
+E:\VS_Workspace\BloodManagementSystem\Blood Bank\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form6.resources
+E:\VS_Workspace\BloodManagementSystem\Blood Bank\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form7.resources
+E:\VS_Workspace\BloodManagementSystem\Blood Bank\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.DonorSearchForm.resources
+E:\VS_Workspace\BloodManagementSystem\Blood Bank\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.PatientDetailForm.resources
+E:\VS_Workspace\BloodManagementSystem\Blood Bank\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.InsertResult.resources
+E:\VS_Workspace\BloodManagementSystem\Blood Bank\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.NewTest.resources
+E:\VS_Workspace\BloodManagementSystem\Blood Bank\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+E:\VS_Workspace\BloodManagementSystem\Blood Bank\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.RegMedicine.resources
+E:\VS_Workspace\BloodManagementSystem\Blood Bank\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+E:\VS_Workspace\BloodManagementSystem\Blood Bank\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
+E:\VS_Workspace\BloodManagementSystem\Blood Bank\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb

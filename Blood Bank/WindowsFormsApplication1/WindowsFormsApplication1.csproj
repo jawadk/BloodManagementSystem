@@ -47,6 +47,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DOA\DonorManager.cs" />
+    <Compile Include="DOA\LoginManager.cs" />
+    <Compile Include="DOA\PatientManager.cs" />
+    <Compile Include="DOA\RegMedineManager.cs" />
     <Compile Include="Forms\Blood transfusion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,67 +66,67 @@
       <DependentUpon>Cover.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\Donor.cs" />
-    <Compile Include="Forms\Form1.cs">
+    <Compile Include="Forms\NewDonorForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Forms\NewDonorForm.Designer.cs">
+      <DependentUpon>NewDonorForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form10.cs">
+    <Compile Include="Forms\DonorDetailForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form10.Designer.cs">
-      <DependentUpon>Form10.cs</DependentUpon>
+    <Compile Include="Forms\DonorDetailForm.Designer.cs">
+      <DependentUpon>DonorDetailForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form11.cs">
+    <Compile Include="Forms\WelcomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form11.Designer.cs">
-      <DependentUpon>Form11.cs</DependentUpon>
+    <Compile Include="Forms\WelcomeForm.Designer.cs">
+      <DependentUpon>WelcomeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form2.cs">
+    <Compile Include="Forms\UserType.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="Forms\UserType.Designer.cs">
+      <DependentUpon>UserType.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form3.cs">
+    <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <Compile Include="Forms\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form5.cs">
+    <Compile Include="Forms\AddNewPatientForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form5.Designer.cs">
-      <DependentUpon>Form5.cs</DependentUpon>
+    <Compile Include="Forms\AddNewPatientForm.Designer.cs">
+      <DependentUpon>AddNewPatientForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form6.cs">
+    <Compile Include="Forms\ReportDashboardForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form6.Designer.cs">
-      <DependentUpon>Form6.cs</DependentUpon>
+    <Compile Include="Forms\ReportDashboardForm.Designer.cs">
+      <DependentUpon>ReportDashboardForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form7.cs">
+    <Compile Include="Forms\PatientSearchForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form7.Designer.cs">
-      <DependentUpon>Form7.cs</DependentUpon>
+    <Compile Include="Forms\PatientSearchForm.Designer.cs">
+      <DependentUpon>PatientSearchForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form8.cs">
+    <Compile Include="Forms\DonorSearchForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form8.Designer.cs">
-      <DependentUpon>Form8.cs</DependentUpon>
+    <Compile Include="Forms\DonorSearchForm.Designer.cs">
+      <DependentUpon>DonorSearchForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form9.cs">
+    <Compile Include="Forms\PatientDetailForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form9.Designer.cs">
-      <DependentUpon>Form9.cs</DependentUpon>
+    <Compile Include="Forms\PatientDetailForm.Designer.cs">
+      <DependentUpon>PatientDetailForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\FreeMedicine.cs" />
+    <Compile Include="Classes\RegMedicineTemp.cs" />
     <Compile Include="Forms\InsertResult.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,11 +134,11 @@
       <DependentUpon>InsertResult.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\Login.cs" />
-    <Compile Include="Forms\NewTest.cs">
+    <Compile Include="Forms\NewTestForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\NewTest.Designer.cs">
-      <DependentUpon>NewTest.cs</DependentUpon>
+    <Compile Include="Forms\NewTestForm.Designer.cs">
+      <DependentUpon>NewTestForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\Patient.cs" />
     <Compile Include="Classes\Person.cs" />
@@ -153,41 +157,41 @@
     <EmbeddedResource Include="Forms\Cover.resx">
       <DependentUpon>Cover.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\NewDonorForm.resx">
+      <DependentUpon>NewDonorForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form10.resx">
-      <DependentUpon>Form10.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\DonorDetailForm.resx">
+      <DependentUpon>DonorDetailForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form11.resx">
-      <DependentUpon>Form11.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\WelcomeForm.resx">
+      <DependentUpon>WelcomeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\UserType.resx">
+      <DependentUpon>UserType.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form5.resx">
-      <DependentUpon>Form5.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AddNewPatientForm.resx">
+      <DependentUpon>AddNewPatientForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form6.resx">
-      <DependentUpon>Form6.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\ReportDashboardForm.resx">
+      <DependentUpon>ReportDashboardForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form7.resx">
-      <DependentUpon>Form7.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\PatientSearchForm.resx">
+      <DependentUpon>PatientSearchForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form8.resx">
-      <DependentUpon>Form8.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\DonorSearchForm.resx">
+      <DependentUpon>DonorSearchForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form9.resx">
-      <DependentUpon>Form9.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\PatientDetailForm.resx">
+      <DependentUpon>PatientDetailForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\InsertResult.resx">
       <DependentUpon>InsertResult.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\NewTest.resx">
-      <DependentUpon>NewTest.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\NewTestForm.resx">
+      <DependentUpon>NewTestForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

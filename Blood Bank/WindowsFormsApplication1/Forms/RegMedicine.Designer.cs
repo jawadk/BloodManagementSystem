@@ -196,7 +196,6 @@
             this.label7.Size = new System.Drawing.Size(78, 20);
             this.label7.TabIndex = 13;
             this.label7.Text = "Syringe";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // textBox7
             // 

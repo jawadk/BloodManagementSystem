@@ -14,7 +14,7 @@ namespace WindowsFormsApplication1
         
         public Connection()
         {
-            connectionString = ConfigurationManager.AppSettings["database"].ToString();
+            connectionString = "E:\\VS_Workspace\\BloodManagementSystem\\Blood Bank\\WindowsFormsApplication1\\bloodbank.accdb";//ConfigurationManager.AppSettings["database"].ToString();
             connectionString = "provider=microsoft.ace.oledb.12.0;data source=" + connectionString;
         }
         public OleDbConnection connect()

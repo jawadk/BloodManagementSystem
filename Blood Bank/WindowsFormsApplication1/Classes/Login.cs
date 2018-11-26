@@ -4,12 +4,13 @@
     using System.Text;
     using System.Data.OleDb;
     using System.Data;
+using WindowsFormsApplication1.DOA;
 
 namespace WindowsFormsApplication1
 {
     class Login
     {
-        Connection con;
+        LoginManager loginManager;
         string userName;
         string userPass;
 
@@ -20,11 +21,11 @@ namespace WindowsFormsApplication1
         }
         public bool getLogin()
         {
-            con = new Connection();
-            bool _check;           
-            string query = "SELECT User_Name, User_Password FROM admin WHERE User_Name = '" + userName + "' AND User_Password = '" + userPass + "'";
-            OleDbCommand cmd = new OleDbCommand(query, con.connect());
-            OleDbDataReader reader = cmd.ExecuteReader();
+            bool _check;
+
+            loginManager = new LoginManager();
+
+            OleDbDataReader reader = loginManager.GetAdminCredentials(userName, userPass);
             if (reader.Read())
             {
                 _check = true;

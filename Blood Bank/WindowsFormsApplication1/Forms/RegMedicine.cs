@@ -7,13 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using WindowsFormsApplication1.DOA;
 
 
 namespace WindowsFormsApplication1
 {
     public partial class RegMedicine : Form
     {
-        FreeMedicine M;
+        RegMedineTemp M;
+        RegMedineManager regManager;
         Connection connect;
         public RegMedicine()
         {
@@ -21,28 +23,21 @@ namespace WindowsFormsApplication1
         }
 
         private void RegMedicine_Load(object sender, EventArgs e)
-        {
+        {   
             try
             {
-                connect = new Connection();
-                string q = "Select Patient_Number from patient";
-                OleDbCommand cmd = new OleDbCommand(q, connect.connect());
-                OleDbDataReader reader = cmd.ExecuteReader();
+                regManager = new RegMedineManager();
+                OleDbDataReader reader = regManager.getPatients();
+               
                 while (reader.Read())
                 {
                     comboBox1.Items.Add(reader[0].ToString());
-
                 }
             }
             catch (Exception excep)
             {
                 MessageBox.Show(excep.Message);
             }
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-        
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -54,8 +49,9 @@ namespace WindowsFormsApplication1
                     if (textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "" && textBox5.Text != "" && textBox6.Text != "" && textBox7.Text != "" && textBox8.Text != "")
                     {
                         DateTime d = dateTimePicker1.Value;
-                        M = new FreeMedicine(comboBox1.Text, textBox2.Text, textBox1.Text, textBox7.Text, textBox5.Text, textBox6.Text, textBox4.Text, textBox3.Text, d);
-                        M.insertData();
+                        M = new RegMedineTemp(comboBox1.Text, textBox2.Text, textBox1.Text, textBox7.Text, textBox5.Text, textBox6.Text, textBox4.Text, textBox3.Text, d);
+                        
+                        regManager.insertData(M);
                         MessageBox.Show("Data inserted Successfully");
 
                         this.Hide();
