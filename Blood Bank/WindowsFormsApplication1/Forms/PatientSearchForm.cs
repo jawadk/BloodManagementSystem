@@ -12,16 +12,15 @@ using WindowsFormsApplication1.DOA;
 
 namespace WindowsFormsApplication1
 {
-    public partial class Form7 : Form
+    public partial class PatientSearchForm : Form
     {
         //Patient's Class Object
         Patient p1;
         PatientManager patientManager = new PatientManager();
-        RegMedineTemp m;
         Blood B;
         Connection con;
 
-        public Form7()
+        public PatientSearchForm()
         {
             InitializeComponent();
         }
@@ -33,14 +32,10 @@ namespace WindowsFormsApplication1
             
             try
             {
-                con = new Connection();
-                string q = "Select Patient_Number from patient";
-                OleDbCommand cmd = new OleDbCommand(q, con.connect());
-                OleDbDataReader reader = cmd.ExecuteReader();
+                OleDbDataReader reader = patientManager.GetPatientsByNumber();
                 while (reader.Read())
                 {
                     comboBox1.Items.Add(reader[0].ToString());
-
                 }
             }
             catch (Exception excep)
@@ -58,7 +53,8 @@ namespace WindowsFormsApplication1
                 {
                     DataTable ptable = new DataTable();
                     p1 = new Patient();
-                    ptable = patientManager.getTable("SELECT * From `patient` WHERE `Patient_Number` = " + comboBox1.Text);
+                    //ptable = patientManager.getTable("SELECT * From `patient` WHERE `Patient_Number` = " + comboBox1.Text);
+                    ptable = patientManager.selectData(comboBox1.Text);
                     dataGridView1.DataSource = ptable;
                 }
                 else
@@ -81,8 +77,7 @@ namespace WindowsFormsApplication1
                 if (comboBox1.Text != "")
                 {
                     DataTable ptable = new DataTable();
-                    p1 = new Patient();
-                    ptable = patientManager.getTable("DELETE * From `patient` where Patient_Number = " + comboBox1.Text);
+                    ptable = patientManager.DeleteUser(comboBox1.Text);
                     dataGridView1.DataSource = ptable;
                     MessageBox.Show("Data Deleted Successfully");                    
                 }
@@ -117,7 +112,7 @@ namespace WindowsFormsApplication1
         private void button4_Click(object sender, EventArgs e)
         {
             this.Hide();
-            UserType f2 = new UserType();
+            UserTypeForm f2 = new UserTypeForm();
             f2.Show();
         }
 
@@ -126,8 +121,8 @@ namespace WindowsFormsApplication1
             if (comboBox1.Text != "")
                 {
                     this.Hide();
-                    PatientDetailForm f9 = new PatientDetailForm();
-                    f9.Show();                    
+                    PatientDetailForm patientDetailForm = new PatientDetailForm();
+                    patientDetailForm.Show();                    
                 }
                 else
                 {
@@ -166,8 +161,9 @@ namespace WindowsFormsApplication1
                 if (comboBox1.Text != "")
                 {
                     DataTable ptable = new DataTable();
-                    m = new RegMedineTemp();
-                    ptable = m.getTable("SELECT * From `Medicine` WHERE `Patient_Number` = " + comboBox1.Text);
+                    RegMedineTemp m = new RegMedineTemp();
+                    string query = "SELECT * From `Medicine` WHERE `Patient_Number` = " + comboBox1.Text;
+                    ptable = m.getTable(query);
                     dataGridView1.DataSource = ptable;                    
                 }
                 else
@@ -189,8 +185,9 @@ namespace WindowsFormsApplication1
               if (comboBox1.Text != "")
                 {
                     DataTable ptable = new DataTable();
-                    B = new Blood();
-                    ptable = B.getTable("SELECT * From `Blood` WHERE Patient_Number = " + comboBox1.Text);
+                    BloodManager bloodManager = new BloodManager();
+                    string query = "SELECT * From `Blood` WHERE Patient_Number = " + comboBox1.Text;
+                    ptable = bloodManager.getTable(query);
                     dataGridView1.DataSource = ptable;                    
                 }
                 else

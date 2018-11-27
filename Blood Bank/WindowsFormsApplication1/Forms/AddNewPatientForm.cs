@@ -90,7 +90,7 @@ namespace WindowsFormsApplication1
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            UserType f2 = new UserType();
+            UserTypeForm f2 = new UserTypeForm();
             f2.Show();
         }
 

@@ -107,5 +107,31 @@ namespace WindowsFormsApplication1.DOA
             adp.Fill(tbl);
             return tbl;
         }
+
+        public OleDbDataReader GetPatientsByNumber(){
+            con = new Connection();
+            string q = "Select Patient_Number from patient";
+            OleDbCommand cmd = new OleDbCommand(q, con.connect());
+            OleDbDataReader reader = cmd.ExecuteReader();
+            return reader;
+        }
+
+        public DataTable DeleteUser(string PatientID)
+        {
+            con = new Connection();
+            try
+            {
+                string query = "DELETE * From `patient` where Patient_Number = " + PatientID;
+                DataTable table = new DataTable();
+                OleDbDataAdapter adapter = new OleDbDataAdapter(query, con.connect());
+                adapter.Fill(table);
+                return table;
+            }
+            catch (Exception excp)
+            {
+                throw excp;
+            }
+        }
+        
     }
 }

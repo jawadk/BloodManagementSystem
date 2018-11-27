@@ -19,7 +19,7 @@ namespace WindowsFormsApplication1
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            UserType f2 = new UserType();
+            UserTypeForm f2 = new UserTypeForm();
             f2.Show();
         }
 
@@ -33,11 +33,6 @@ namespace WindowsFormsApplication1
             this.Hide();
             LoginForm f3 = new LoginForm();
             f3.Show();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void hover(object sender, EventArgs e)
@@ -85,14 +80,14 @@ namespace WindowsFormsApplication1
         private void button3_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            RegMedicine R = new RegMedicine();
+            RegMedicineForm R = new RegMedicineForm();
             R.Show();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Blood_transfusion b = new Blood_transfusion();
+            BloodTransfusion b = new BloodTransfusion();
             b.Show();
         }
 
@@ -119,14 +114,14 @@ namespace WindowsFormsApplication1
         private void button7_Click(object sender, EventArgs e)
         {
             this.Hide();
-            LoginForm form3= new LoginForm();
-            form3.Show();
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Blood_transfusion bt = new Blood_transfusion();
+            BloodTransfusion bt = new BloodTransfusion();
             bt.Show();
         }
     }

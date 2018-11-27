@@ -47,15 +47,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DOA\BloodManager.cs" />
     <Compile Include="DOA\DonorManager.cs" />
     <Compile Include="DOA\LoginManager.cs" />
     <Compile Include="DOA\PatientManager.cs" />
     <Compile Include="DOA\RegMedineManager.cs" />
-    <Compile Include="Forms\Blood transfusion.cs">
+    <Compile Include="Forms\BloodTransfusion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Blood transfusion.Designer.cs">
-      <DependentUpon>Blood transfusion.cs</DependentUpon>
+    <Compile Include="Forms\BloodTransfusion.Designer.cs">
+      <DependentUpon>BloodTransfusion.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\Blood.cs" />
     <Compile Include="Classes\Connection.cs" />
@@ -84,11 +85,11 @@
     <Compile Include="Forms\WelcomeForm.Designer.cs">
       <DependentUpon>WelcomeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\UserType.cs">
+    <Compile Include="Forms\UserTypeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\UserType.Designer.cs">
-      <DependentUpon>UserType.cs</DependentUpon>
+    <Compile Include="Forms\UserTypeForm.Designer.cs">
+      <DependentUpon>UserTypeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
@@ -126,7 +127,7 @@
     <Compile Include="Forms\PatientDetailForm.Designer.cs">
       <DependentUpon>PatientDetailForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\RegMedicineTemp.cs" />
+    <Compile Include="Classes\RegMedicine.cs" />
     <Compile Include="Forms\InsertResult.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,15 +145,15 @@
     <Compile Include="Classes\Person.cs" />
     <Compile Include="Classes\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Forms\RegMedicine.cs">
+    <Compile Include="Forms\RegMedicineForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\RegMedicine.Designer.cs">
-      <DependentUpon>RegMedicine.cs</DependentUpon>
+    <Compile Include="Forms\RegMedicineForm.Designer.cs">
+      <DependentUpon>RegMedicineForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\Reports.cs" />
-    <EmbeddedResource Include="Forms\Blood transfusion.resx">
-      <DependentUpon>Blood transfusion.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\BloodTransfusion.resx">
+      <DependentUpon>BloodTransfusion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Cover.resx">
       <DependentUpon>Cover.cs</DependentUpon>
@@ -166,8 +167,8 @@
     <EmbeddedResource Include="Forms\WelcomeForm.resx">
       <DependentUpon>WelcomeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\UserType.resx">
-      <DependentUpon>UserType.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\UserTypeForm.resx">
+      <DependentUpon>UserTypeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -198,8 +199,8 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\RegMedicine.resx">
-      <DependentUpon>RegMedicine.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\RegMedicineForm.resx">
+      <DependentUpon>RegMedicineForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Classes\App1.config">
       <SubType>Designer</SubType>

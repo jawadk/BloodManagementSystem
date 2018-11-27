@@ -104,7 +104,7 @@ namespace WindowsFormsApplication1
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form7 f7 = new Form7();
+            PatientSearchForm f7 = new PatientSearchForm();
             f7.Show();
         }
 

@@ -11,23 +11,18 @@ using WindowsFormsApplication1.DOA;
 
 namespace WindowsFormsApplication1
 {
-    public partial class NewTest : Form
+    public partial class NewTestForm : Form
     {
         Patient p1;
-        PatientManager patientManager; 
+        PatientManager patientManager = new PatientManager(); 
         Connection connect;
         Reports R;
-        public NewTest()
+        public NewTestForm()
         {
             InitializeComponent();
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void Done_Click(object sender, EventArgs e)
         {
             try
             {
@@ -82,7 +77,6 @@ namespace WindowsFormsApplication1
                 while (reader.Read())
                 {
                     comboBox1.Items.Add(reader[0].ToString());
-
                 }
             }
             catch (Exception excep)
@@ -94,16 +88,11 @@ namespace WindowsFormsApplication1
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form6 f6 = new Form6();
+            ReportDashboardForm f6 = new ReportDashboardForm();
             f6.Show();
         }
 
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
+        private void Select_Click(object sender, EventArgs e)
         {
             try
             {

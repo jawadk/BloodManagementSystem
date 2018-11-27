@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class Form6 : Form
+    public partial class ReportDashboardForm : Form
     {
-        public Form6()
+        public ReportDashboardForm()
         {
             InitializeComponent();
         }
@@ -33,11 +33,6 @@ namespace WindowsFormsApplication1
             f3.Show();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             pictureBox2.Visible = true;
@@ -49,7 +44,7 @@ namespace WindowsFormsApplication1
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            NewTest T = new NewTest();
+            NewTestForm T = new NewTestForm();
             T.Show();
         }
 

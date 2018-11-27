@@ -11,13 +11,13 @@ namespace WindowsFormsApplication1
     {
         Connection con;
 
-        string id;
-        DateTime D;
-        DateTime D1;
-        string wash;
-        string temp;
-        string HB;
-        string AmountOfblood;
+        public string id;
+        public DateTime D;
+        public DateTime D1;
+        public string wash;
+        public string temp;
+        public string HB;
+        public string AmountOfblood;
 
         public Blood()
         {
@@ -34,30 +34,5 @@ namespace WindowsFormsApplication1
             HB = hb;
             AmountOfblood = amount;
         }
-
-        public void insertData()
-        {
-            con = new Connection();
-            string insertQuery;
-            insertQuery = String.Format("INSERT INTO `Blood` (`Patient_Number`, `TransfusionDate`, `NextTransfusion`, `BloodWash`, `Temperature`, `HB`, `AmountOfBlood`) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}')", id, D, D1, wash, temp, HB,AmountOfblood).ToString();
-            OleDbCommand cmd = new OleDbCommand(insertQuery, con.connect());
-            cmd.ExecuteNonQuery();
-        }
-
-        public DataTable getTable(string query)
-        {
-            con = new Connection();
-            try
-            {
-                DataTable table = new DataTable();
-                OleDbDataAdapter adapter = new OleDbDataAdapter(query, con.connect());
-                adapter.Fill(table);
-                return table;
-            }
-            catch (Exception excp)
-            {
-                throw excp;
-            }
-        }      
     }
 }

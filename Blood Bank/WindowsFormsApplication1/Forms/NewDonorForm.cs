@@ -22,7 +22,7 @@ namespace WindowsFormsApplication1
         private void NewDonorForm_Load(object sender, EventArgs e)
         {
             textBox1.Hide();
-            label12.Hide();
+            label2.Hide();
 
             try
             {
@@ -49,7 +49,7 @@ namespace WindowsFormsApplication1
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            UserType userType = new UserType();
+            UserTypeForm userType = new UserTypeForm();
             userType.Show();
         }
 

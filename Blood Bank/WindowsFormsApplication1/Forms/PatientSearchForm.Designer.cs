@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class Form7
+    partial class PatientSearchForm
     {
         /// <summary>
         /// Required designer variable.

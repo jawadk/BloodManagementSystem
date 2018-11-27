@@ -29,7 +29,7 @@ namespace WindowsFormsApplication1
                     if (login == true)
                     {
                         this.Hide();
-                        Form6 f6 = new Form6();
+                        ReportDashboardForm f6 = new ReportDashboardForm();
                         f6.Show();
                     }
                     else

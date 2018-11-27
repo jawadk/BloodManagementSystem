@@ -98,7 +98,7 @@ namespace WindowsFormsApplication1
                 R.inserttest();
                 MessageBox.Show("Report Inserted Sucessfully....");
                 this.Hide();
-                Form6 f6 = new Form6();
+                ReportDashboardForm f6 = new ReportDashboardForm();
                 f6.Show();
             }
             catch (Exception excep)
@@ -110,7 +110,7 @@ namespace WindowsFormsApplication1
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form6 f6 = new Form6();
+            ReportDashboardForm f6 = new ReportDashboardForm();
             f6.Show();
         }
 
@@ -138,7 +138,7 @@ namespace WindowsFormsApplication1
         private void button2_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            Form6 f6 = new Form6();
+            ReportDashboardForm f6 = new ReportDashboardForm();
             f6.Show();
         }
     }

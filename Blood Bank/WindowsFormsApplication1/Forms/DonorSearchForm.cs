@@ -91,7 +91,7 @@ namespace WindowsFormsApplication1
         private void button4_Click(object sender, EventArgs e)
         {
             this.Hide();
-            UserType userType = new UserType();
+            UserTypeForm userType = new UserTypeForm();
             userType.Show();
         }
 
