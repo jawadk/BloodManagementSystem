@@ -11,19 +11,20 @@ namespace WindowsFormsApplication1
     class Reports
     {
         Connection con;
-        string patientId;
-        string patientname;
-        string Age;
-        string typesoftest;
-        string BloodGroup;
-        string Cell;
-        string Address;
-        DateTime d;
-        DateTime testresultdate;
-        string Bill;
-        string billpayed;
-        string reports;
-        string reportId;
+        public string patientId;
+        public string patientname;
+        public string Age;
+        public string typesoftest;
+        public string BloodGroup;
+        public string Cell;
+        public string Address;
+        public DateTime d;
+        public DateTime testresultdate;
+        public string Bill;
+        public string billpayed;
+        public string reports;
+        public string reportId;
+
         public Reports(DateTime testdate, DateTime reultdate, string typeoftests, string bills)
         {
             d = testdate;
@@ -59,13 +60,7 @@ namespace WindowsFormsApplication1
 
         }
 
-        public void insertreport()
-        {
-            con = new Connection();
-            string q = string.Format("INSERT INTO `report` (`Patient_Number`, `Patient_Name`, `Patient_Cell`, `Patient_Age`,`Patient_Blood_Group`,`Patient_Address`, `Report_Date`,`Test_Result`,`Types_of_Test`,`Bill`)VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}')", patientId, patientname, Cell, Age, BloodGroup, Address, d, testresultdate, typesoftest, Bill).ToString();
-            OleDbCommand com = new OleDbCommand(q, con.connect());
-            com.ExecuteNonQuery();
-        }
+        
 
         public DataTable selectData(string id)
         {

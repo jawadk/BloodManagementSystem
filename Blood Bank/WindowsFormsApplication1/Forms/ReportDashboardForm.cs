@@ -77,8 +77,6 @@ namespace WindowsFormsApplication1
            
         }
 
-     
-
         private void button1_MouseLeave_1(object sender, EventArgs e)
         {
             button1.Size = new Size(75, 27);

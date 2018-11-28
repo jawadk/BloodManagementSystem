@@ -582,3 +582,4 @@ E:\VS_Workspace\BloodManagementSystem\Blood Bank\WindowsFormsApplication1\obj\x8
 E:\VS_Workspace\BloodManagementSystem\Blood Bank\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
 E:\VS_Workspace\BloodManagementSystem\Blood Bank\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
 E:\VS_Workspace\BloodManagementSystem\Blood Bank\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.ReportDashboardForm.resources
+E:\VS_Workspace\BloodManagementSystem\Blood Bank\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form4.resources

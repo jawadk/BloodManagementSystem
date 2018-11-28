@@ -56,7 +56,8 @@ namespace WindowsFormsApplication1
                 DateTime d = dateTimePicker1.Value;
                 DateTime d1 = dateTimePicker2.Value;
                 R = new Reports(comboBox1.Text, textBox3.Text, textBox8.Text, textBox9.Text, textBox2.Text, textBox5.Text, d, d1, radio.ToString(), textBox7.Text);
-                R.insertreport();
+                ReportManager rManager = new ReportManager();
+                rManager.insertreport(R);
                 label9.Visible = true;
                 textBox7.Visible = true;
             }
@@ -70,10 +71,7 @@ namespace WindowsFormsApplication1
         {
             try
             {
-                connect = new Connection();
-                string q = "Select Patient_Number from patient";
-                OleDbCommand cmd = new OleDbCommand(q, connect.connect());
-                OleDbDataReader reader = cmd.ExecuteReader();
+                OleDbDataReader reader = patientManager.GetPatientsByNumber();
                 while (reader.Read())
                 {
                     comboBox1.Items.Add(reader[0].ToString());

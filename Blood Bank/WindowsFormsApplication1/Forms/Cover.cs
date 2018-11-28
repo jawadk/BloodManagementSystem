@@ -80,6 +80,7 @@ namespace WindowsFormsApplication1
         private void button3_Click_1(object sender, EventArgs e)
         {
             this.Hide();
+            //Form4 R = new Form4();
             RegMedicineForm R = new RegMedicineForm();
             R.Show();
         }
