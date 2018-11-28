@@ -59,27 +59,5 @@ namespace WindowsFormsApplication1
         {
 
         }
-
-        
-
-        public DataTable selectData(string id)
-        {
-            DataTable tbl = new DataTable();
-            con = new Connection();
-            string query = "SELECT * FROM report WHERE  Report_Number= " + id;
-            OleDbCommand cmd = new OleDbCommand(query, con.connect());
-            cmd.Parameters.AddWithValue("@p1", id);
-            OleDbDataAdapter adp = new OleDbDataAdapter(cmd);
-            adp.Fill(tbl);
-            return tbl;
-        }
-
-        public void inserttest()
-        {
-            con = new Connection();
-            string q = string.Format("INSERT INTO `test` (`Report_Number`, `Report`,`Patient_Number`,`Bill`)VALUES ('{0}','{1}','{2}','{3}')", reportId, reports, patientId, billpayed).ToString();
-            OleDbCommand com = new OleDbCommand(q, con.connect());
-            com.ExecuteNonQuery();
-        }
     }
 }

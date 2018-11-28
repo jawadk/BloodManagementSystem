@@ -15,7 +15,6 @@ namespace WindowsFormsApplication1
     {
         Patient p1;
         PatientManager patientManager = new PatientManager(); 
-        Connection connect;
         Reports R;
         public NewTestForm()
         {

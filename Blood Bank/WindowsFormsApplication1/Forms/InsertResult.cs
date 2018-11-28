@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using WindowsFormsApplication1.DOA;
 
 namespace WindowsFormsApplication1
 {
@@ -24,10 +25,8 @@ namespace WindowsFormsApplication1
         {
             try
             {
-                con = new Connection();
-                string q = "Select Report_Number from report";
-                OleDbCommand cmd = new OleDbCommand(q, con.connect());
-                OleDbDataReader reader = cmd.ExecuteReader();
+                ReportManager rManager = new ReportManager();
+                OleDbDataReader reader = rManager.GetReport(); 
                 while (reader.Read())
                 {
                     comboBox1.Items.Add(reader[0].ToString());
@@ -45,8 +44,8 @@ namespace WindowsFormsApplication1
             try
             {
                 DataTable tbl = new DataTable();
-                R = new Reports();
-                tbl = R.selectData(comboBox1.Text);
+                ReportManager rManager = new ReportManager();
+                tbl = rManager.selectData(comboBox1.Text);
                 comboBox1.Text = tbl.Rows[0]["Report_Number"].ToString();
                 textBox1.Text = tbl.Rows[0]["Patient_Number"].ToString();
                 textBox2.Text = tbl.Rows[0]["Patient_Name"].ToString();
@@ -67,35 +66,13 @@ namespace WindowsFormsApplication1
             
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox7_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-           
-        }
-            
-            
-        
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
                 R = new Reports(comboBox1.Text, richTextBox1.Text, Radio, textBox1.Text);
-                R.inserttest();
+                ReportManager rManager = new ReportManager();
+                rManager.inserttest(R);
                 MessageBox.Show("Report Inserted Sucessfully....");
                 this.Hide();
                 ReportDashboardForm f6 = new ReportDashboardForm();

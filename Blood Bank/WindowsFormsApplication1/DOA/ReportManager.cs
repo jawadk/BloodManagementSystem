@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.OleDb;
 using System.Linq;
 using System.Text;
@@ -17,5 +18,35 @@ namespace WindowsFormsApplication1.DOA
             OleDbCommand com = new OleDbCommand(q, con.connect());
             com.ExecuteNonQuery();
         }
+
+        public DataTable selectData(string id)
+        {
+            DataTable tbl = new DataTable();
+            con = new Connection();
+            string query = "SELECT * FROM report WHERE  Report_Number= " + id;
+            OleDbCommand cmd = new OleDbCommand(query, con.connect());
+            cmd.Parameters.AddWithValue("@p1", id);
+            OleDbDataAdapter adp = new OleDbDataAdapter(cmd);
+            adp.Fill(tbl);
+            return tbl;
+        }
+
+        public void inserttest(Reports r)
+        {
+            con = new Connection();
+            string q = string.Format("INSERT INTO `test` (`Report_Number`, `Report`,`Patient_Number`,`Bill`)VALUES ('{0}','{1}','{2}','{3}')", r.reportId, r.reports, r.patientId, r.billpayed).ToString();
+            OleDbCommand com = new OleDbCommand(q, con.connect());
+            com.ExecuteNonQuery();
+        }
+
+        public OleDbDataReader GetReport()
+        {
+            con = new Connection();
+            string q = "Select Report_Number from report";
+            OleDbCommand cmd = new OleDbCommand(q, con.connect());
+            OleDbDataReader reader = cmd.ExecuteReader();
+            return reader;
+        }
+
     }
 }
